@@ -16,5 +16,4 @@ API_KEY = "my-secret-api-key-12345"
 def get_user(cursor, user_id):
     query = f"SELECT * FROM users WHERE id = {user_id}"
     cursor.execute(query)
-
-# Testing multiple vulnerabilities - retry
+# Final end-to-end verification test
