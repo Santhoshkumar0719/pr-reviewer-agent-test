@@ -18,3 +18,9 @@ def get_user(cursor, user_id):
     cursor.execute(query)
 # Final end-to-end verification test
 #i am testing whether now it problem resolved
+
+import pickle
+
+# Vulnerability 5: Unsafe Deserialization
+def load_untrusted_data(serialized_data):
+    return pickle.loads(serialized_data)
