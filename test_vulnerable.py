@@ -1,4 +1,26 @@
 import subprocess
+import sqlite3
 
+# Vulnerability 1: Command Injection
 def run_command(user_input):
     subprocess.run(user_input, shell=True)
+
+# Vulnerability 2: Arbitrary Code Execution
+def calculate(expression):
+    return eval(expression)
+
+# Vulnerability 3: Hardcoded Secret
+API_KEY = "my-secret-api-key-12345"
+
+# Vulnerability 4: SQL Injection
+def get_user(cursor, user_id):
+    query = f"SELECT * FROM users WHERE id = {user_id}"
+    cursor.execute(query)
+# Final end-to-end verification test
+#i am testing whether now it problem resolved
+
+import pickle
+
+# Vulnerability 5: Unsafe Deserialization
+def load_untrusted_data(serialized_data):
+    return pickle.loads(serialized_data)
